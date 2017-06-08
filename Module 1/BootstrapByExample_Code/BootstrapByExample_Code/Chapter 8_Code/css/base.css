@@ -1,0 +1,377 @@
+body {
+  padding-top: 4em;
+  background-color: #F5F8FA;
+}
+
+/*nav*/
+.navbar-brand img {
+  height: 100%
+}
+
+nav form#search {
+  float: right;
+  padding: 0.5em;
+}
+
+nav form#search .input-group .form-control:first-child {
+  border-radius: 0.25em;
+}
+
+nav form#search .glyphicon-search {
+  z-index: 99;
+  position: absolute;
+  right: 0.7em;
+  top: 50%;
+  margin-top: -0.44em;
+}
+
+/*nav options*/
+#nav-options, #tweet {
+  margin: 0.5em;
+}
+
+#nav-options button.thumbnail {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-options img {
+  max-height: 2.3em;
+  border-radius: 0.3em;
+}
+
+/*custom nav*/
+.navbar-default {
+  background-color: #2F92CA;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFF;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: transparent;
+  color: #FFF;
+  padding-bottom: 0.62em;
+  border-bottom: 0.45em solid #FFF;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: transparent;
+  color: #F3F3F3;
+  padding-bottom: 0.62em;
+  border-bottom: 0.45em solid #F3F3F3;
+}
+
+.navbar-nav .badge {
+  color: #2F92CA;
+  background-color: #FFF;
+  font-size: 0.7em;
+  padding: 0.27rem 0.55rem 0.2rem 0.4rem;
+  position: absolute;
+  left: 0.37rem;
+  top: 0.7rem;
+  z-index: 99;
+  border: 0.2rem solid #2F92CA;
+}
+
+.navbar-header .navbar-toggle,
+.navbar-default .navbar-toggle:focus {
+  background-color: #57A5D2;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: #3986B3;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
+@media(max-width:34em){
+  .navbar-default .navbar-nav > .active > a {
+    border-bottom: none;
+    border-left: 0.45em solid #FFF;
+    padding-left: 0.5em;
+  }
+}
+
+/* Bootstrap 3 Cards! */
+.card {
+  position: relative;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 0.4rem;
+  position: relative;
+  background-color: #FFF;
+}
+
+.card-img-top {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.card-block {
+  padding: 1.25rem;
+}
+
+/* webapp Card custom */
+.card-block img.card-img {
+  top: 50%;
+  margin-top: -36px;
+  width: 72px;
+  border: 3px solid #FFF;
+  border-radius: 0.4rem;
+  float: left;
+  position: relative;
+  z-index: 99;
+}
+
+.card-block .card-title {
+  float: left;
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+.card-block .card-title small {
+  display: block;
+}
+
+.card-block .card-text {
+  clear: both;
+  padding-top: 0.25em;
+  margin-bottom: 1.5em;
+}
+
+.card-block ul a:hover {
+  text-decoration: none;
+}
+
+.card-block ul .profile-stats {
+  color: #777;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.63em;
+}
+
+.card-block ul .profile-value {
+  color: #000;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2F92CA;
+}
+
+/*photo card*/
+.card .card-header {
+  border-radius: 0.4rem 0.4rem 0 0;
+  padding: .75rem 1.25rem;
+  background-color: #f5f5f5;
+  border-bottom: 0.1em solid #e5e5e5;
+  color: #4e5665;
+  font-weight: bold;
+}
+
+#profile-photo {
+  margin-top: 2rem;
+}
+
+#profile-photo ul {
+  margin: 0;
+}
+
+#profile-photo li {
+  width: 48%;
+  padding: 0;
+}
+
+#profile-photo li a {
+  margin: 0;
+}
+
+/*main content*/
+/*form new messsage*/
+form#new-message {
+  border-radius: 0.4rem 0.4rem 0 0;
+  padding: 1em;
+  border-bottom: 0.1em solid #CEE4F5;
+  background-color: #EBF4FB;
+}
+
+form#new-message .input-group-addon {
+  background-color: #FFF;
+}
+
+/*feed*/
+ul#feed {
+  margin: 0;
+}
+
+ul#feed li {
+  padding: 1em 1em;
+  border-bottom: 0.1rem solid #e5e5e5;
+}
+
+ul#feed li:last-child {
+  border-bottom: none;
+}
+
+ul#feed .feed-avatar {
+  width: 13%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+ul#feed .feed-post {
+  width: 80%;
+  display: inline-block;
+  margin-left: 2%;
+}
+
+ul#feed .feed-post h5 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+ul#feed .feed-post h5 > small {
+  font-size: 1.2rem;
+}
+
+ul#feed .action-list {
+  margin-left: 13%;
+  padding-left: 1em;
+}
+
+ul#feed .action-list a {
+  width: 15%;
+  display: inline-block;
+}
+
+ul#feed .action-list a:hover {
+  text-decoration: none;
+}
+
+ul#feed .action-list .retweet-count {
+  padding-left: 0.2em;
+  font-weight: bold;
+}
+
+/*right content*/
+/*who follow*/
+div#who-follow li {
+  margin-bottom: 2em;
+}
+
+div#who-follow li:last-child {
+  margin-bottom: 0;
+}
+
+div#who-follow li img {
+  width: 26%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2%;
+}
+
+div#who-follow li .info {
+  width: 68%;
+  display: inline-block;
+}
+
+div#who-follow li .info strong {
+  display: block;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+div#who-follow li .info .glyphicon {
+  color: #2F92CA;
+}
+
+div#who-follow li .info .glyphicon-ok {
+  color: #5cb85c;
+}
+
+/*app-info card*/
+.card .card-footer {
+  border-radius: 0 0 0.4rem 0.4rem;
+  padding: .75rem 1.25rem;
+  background-color: #f5f5f5;
+  border-top: 0.1em solid #e5e5e5;
+  color: #4e5665;
+}
+
+div#app-info {
+  margin-top: 2rem;
+}
+
+/*alerts*/
+.alert {
+  border-left-width: 0.5rem;
+}
+
+.alert h3 {
+  margin: 0  0 1rem;
+  font-size: 1.4em;
+}
+
+.progress-bar.active {
+  animation: w70 1s ease forwards,
+             progress-bar-stripes 2s linear infinite;
+}
+
+@keyframes w70 {
+  from { width: 0%; }
+  to { width: 70%; }
+}
+
+.row .card + .card {
+  margin-top: 2rem;
+}
+
+/*modal CSS*/
+#tweet-modal .char-count {
+  padding: 0.7rem 0;
+}
+
+#messages-modal .btn-message {
+  position: absolute;
+  right: 3em;
+  top: 0.75em;
+}
+
+#messages-modal .modal-body {
+  max-height: 32rem;
+  overflow: auto;
+}
+
+#messages-modal li {
+  padding: 0.75rem;
+  border-bottom: 0.1rem solid #E6E6E6;
+}
+
+#messages-modal li:hover {
+  background-color: #E6E6E6;
+}
+
+#messages-modal li a:hover {
+  text-decoration: none;
+}
+
+#messages-modal li img {
+  max-width: 15%;
+}
+
+#messages-modal .msg-content {
+  display: inline-block;
+  color: #000;
+}
+
+#messages-modal .msg-content h5 {
+  font-size: 1em;
+  font-weight: bold;
+}

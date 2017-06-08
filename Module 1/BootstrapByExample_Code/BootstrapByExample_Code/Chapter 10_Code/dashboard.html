@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/switchery.min.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- Bootstrap 4 CDN CSS -->
+<!--     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-GHW2S7IZAQe8+YkyL99LyDj1zdWXSPOG+JZafCtKiSc= sha512-vxM32w6T7zJ83xOQ6FT4CEFnlasqmkcB0+ojgbI0N6ZtSxYvHmT7sX2icN07TqEqr5wdKwoLkmB8sAsGAjCJHg==" crossorigin="anonymous"> -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="loading">
+    </div>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 top-left-menu">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="dashboard.html">
+                <h1>dashboard</h1>
+              </a>
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <a href="#" id="search-icon" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="Display search bar" class="header-buttons pull-right visible-xs">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="Refresh data" class="header-buttons pull-right">
+              <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <form id="search" role="search" class="col-sm-3">
+            <div class="input-group">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              <input type="text" class="form-control transition" placeholder="Search...">
+            </div>
+          </form>
+
+          <div id="nav-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <div id="btn-notifications" class="btn-group">
+                  <span class="badge">3</span>
+                  <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Notifications
+                  </button>
+                  <ul id="notification-list" class="dropdown-menu pull-right">
+                    <li>
+                      <a href="#">
+                        <span class="badge"></span>
+                        <img src="imgs/laika.jpg" class="img-circle">
+                        <div class="notification-message">
+                          <strong>Laika</strong>
+                          <p>Hey! How are you?</p>
+                          <em class="since">2h ago</em>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="badge"></span>
+                        <img src="imgs/cat.jpg" class="img-circle">
+                        <div class="notification-message">
+                          <strong>Devil cat</strong>
+                          <p>I will never forgive you...</p>
+                          <em class="since">6h ago</em>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="badge"></span>
+                        <img src="imgs/doge.jpg" class="img-circle">
+                        <div class="notification-message">
+                          <strong>Doge</strong>
+                          <p>What are you doing? So scare. It's alright now.</p>
+                          <em class="since">yesterday</em>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="visible-xs">
+                <a href="audience.html">Audience</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Finances</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Realtime</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Projects</a>
+              </li>
+              <li role="separator" class="divider visible-xs"></li>
+              <li class="visible-xs">
+                <a href="#">Profile</a>
+              </li>
+              <li class="visible-xs">
+                <a href="settings.html">Setting</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+
+            <!-- Options button dropdown -->
+            <div id="nav-profile" class="btn-group pull-right hidden-xs">
+              <button type="button" class="btn btn-link dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/jon.png" class="img-circle">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="settings.html">Setting</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="side-menu" class="col-sm-3 hidden-xs" data-spy="affix" data-offset-top="0">
+          <div class="profile-block">
+            <img src="imgs/jon.png" class="img-circle">
+            <h4 class="profile-title">Jonny Doo <small>@jonnydoo</small></h4>
+          </div>
+
+          <ul class="nav nav-pills nav-stacked">
+            <li>
+              <a href="#" class="transition">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                Overview
+              </a>
+            </li>
+            <li>
+              <a href="audience.html" class="transition">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                Audience
+              </a>
+            </li>
+            <li>
+              <a href="#finances-opts" class="transition" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="finances-opts">
+                <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                Finances
+                <span class="glyphicon glyphicon-menu-left pull-right transition" aria-hidden="true"></span>
+              </a>
+              <ul class="collapse list-unstyled" id="finances-opts">
+                <li>
+                  <a href="#" class="transition">
+                    Incomes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="transition">
+                    Outcomes
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="transition">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                Real time
+                <span class="badge pull-right">12</span>
+              </a>
+            </li>
+            <li class="nav-divider"></li>
+            <li>
+              <a href="#projects-opts" class="transition" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="projects-opts">
+                <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                Projects
+                <span class="glyphicon glyphicon-menu-left pull-right transition" aria-hidden="true"></span>
+              </a>
+              <ul class="collapse list-unstyled" id="projects-opts">
+                <li>
+                  <a href="#" class="transition">
+                    Free ration nation
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="transition">
+                    Cats going crazy
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div id="main" class="col-sm-offset-3 col-sm-9">
+          <div class="card" id="pie-charts">
+            <div class="card-block">
+              <h2>Overall analysis</h2>
+              <div class="round-chart" data-percent="42">
+                <span>
+                  42
+                  <small>
+                    % <br>
+                    recurring
+                  </small>
+                </span>
+              </div>
+              <div class="round-chart" data-percent="87">
+                <span>
+                  87
+                  <small>
+                    % <br>
+                    aware
+                  </small>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="quick-info">
+            <div class="card-block">
+              <h2>Quick stats</h2>
+              <div class="quick-stats">
+                <strong>Today:</strong>
+                <span>78</span>
+              </div>
+              <div class="quick-stats">
+                <strong>This month:</strong>
+                <span>459</span>
+              </div>
+              <div class="quick-stats">
+                <strong>All time:</strong>
+                <span>54k</span>
+              </div>
+              <div class="quick-stats">
+                <strong>Bounce rate:</strong>
+                <span>81.08%</span>
+              </div>
+              <div class="quick-stats">
+                <strong>Session duration:</strong>
+                <span>00:01:41</span>
+              </div>
+              <div class="quick-stats">
+                <strong>New session:</strong>
+                <span>63.86%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="performance-eval">
+            <div class="card-block">
+              <h2>Performance evaluation</h2>
+              <div class="spider-chart"></div>
+            </div>
+          </div>
+
+          <div class="card" id="ration-stock">
+            <div class="card-block">
+              <h2>Ration stock info</h2>
+              <div class="stacked-area"></div>
+              <div class="switch">
+                View main stocks
+                <input type="checkbox" class="swithcery" checked />
+                <div class="clearfix"></div>
+              </div>
+              <div class="switch">
+                Hide empty stocks
+                <input type="checkbox" class="swithcery" />
+                <div class="clearfix"></div>
+              </div>
+              </div>
+          </div>
+
+          <div class="card" id="real-time">
+            <div class="card-block">
+            <h2>Real time information</h2>
+              <ul class="list-unstyled">
+                <li>
+                  Active dogs:
+                  <span class="label label-warning pull-right">255</span>
+                </li>
+                <li>
+                  Silo status:
+                  <span class="badge ok pull-right">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                  </span>
+                </li>
+                <li>
+                  Usage level:
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                      <span class="sr-only">25%</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%">
+                      <span class="sr-only">38% alocated</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+                      <span class="sr-only">5% reserved</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  Free space:
+                  <span class="pull-right">
+                    32%
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" id="daily-usage">
+            <div class="card-block">
+              <h2>Daily usage</h2>
+              <div class="area-chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="js/switchery.min.js"></script>
+
+    <!-- Bootstrap 4 CDN JS -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js" integrity="sha256-+h0g0j7qusP72OZaLPCSZ5wjZLnoUUicoxbvrl14WxM= sha512-0z9zJIjxQaDVzlysxlaqkZ8L9jh8jZ2d54F3Dn36Y0a8C6eI/RFOME/tLCFJ42hfOxdclfa29lPSNCmX5ekxnw==" crossorigin="anonymous"></script> -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

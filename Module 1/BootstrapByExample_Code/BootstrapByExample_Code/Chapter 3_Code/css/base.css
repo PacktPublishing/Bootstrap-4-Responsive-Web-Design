@@ -1,0 +1,10 @@
+.nowrap {
+    white-space: nowrap;
+}
+
+@media (max-width: 48em) {
+    table .btn {
+        font-size: 12px;
+        font-size: 3.5vw;
+    }
+}

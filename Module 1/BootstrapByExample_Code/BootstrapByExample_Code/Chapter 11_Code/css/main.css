@@ -1,0 +1,19 @@
+#carousel-notification img {
+    width: 100%;
+    max-height: 600px;
+}
+
+.btn-purple {
+    color: #fff;
+    background-color: #803BDB;
+    border-color: #822FBA;
+}
+
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active,
+.btn-purple.active {
+    color: #ffffff;
+    background-color: #6B39AD;
+    border-color: #822FBA;
+}

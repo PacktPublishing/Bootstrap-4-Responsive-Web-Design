@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/switchery.min.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- Bootstrap 4 CDN CSS -->
+<!--     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-GHW2S7IZAQe8+YkyL99LyDj1zdWXSPOG+JZafCtKiSc= sha512-vxM32w6T7zJ83xOQ6FT4CEFnlasqmkcB0+ojgbI0N6ZtSxYvHmT7sX2icN07TqEqr5wdKwoLkmB8sAsGAjCJHg==" crossorigin="anonymous"> -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="loading">
+    </div>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 top-left-menu">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="dashboard.html">
+                <h1>dashboard</h1>
+              </a>
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <a href="#" id="search-icon" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="Display search bar" class="header-buttons pull-right visible-xs">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="Refresh data" class="header-buttons pull-right">
+              <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <form id="search" role="search" class="col-sm-3">
+            <div class="input-group">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              <input type="text" class="form-control transition" placeholder="Search...">
+            </div>
+          </form>
+
+          <div id="nav-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <div id="btn-notifications" class="btn-group">
+                  <span class="badge">3</span>
+                  <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Notifications
+                  </button>
+                  <ul id="notification-list" class="dropdown-menu pull-right">
+                    <li>
+                      <a href="#">
+                        <span class="badge"></span>
+                        <img src="imgs/laika.jpg" class="img-circle">
+                        <div class="notification-message">
+                          <strong>Laika</strong>
+                          <p>Hey! How are you?</p>
+                          <em class="since">2h ago</em>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="badge"></span>
+                        <img src="imgs/cat.jpg" class="img-circle">
+                        <div class="notification-message">
+                          <strong>Devil cat</strong>
+                          <p>I will never forgive you...</p>
+                          <em class="since">6h ago</em>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="badge"></span>
+                        <img src="imgs/doge.jpg" class="img-circle">
+                        <div class="notification-message">
+                          <strong>Doge</strong>
+                          <p>What are you doing? So scare. It's alright now.</p>
+                          <em class="since">yesterday</em>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="visible-xs">
+                <a href="audience.html">Audience</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Finances</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Realtime</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Projects</a>
+              </li>
+              <li role="separator" class="divider visible-xs"></li>
+              <li class="visible-xs">
+                <a href="#">Profile</a>
+              </li>
+              <li class="visible-xs">
+                <a href="settings.html">Setting</a>
+              </li>
+              <li class="visible-xs">
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+
+            <!-- Options button dropdown -->
+            <div id="nav-profile" class="btn-group pull-right hidden-xs">
+              <button type="button" class="btn btn-link dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/jon.png" class="img-circle">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="settings.html">Setting</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="side-menu" class="col-sm-3 hidden-xs" data-spy="affix" data-offset-top="0">
+          <div class="profile-block">
+            <img src="imgs/jon.png" class="img-circle">
+            <h4 class="profile-title">Jonny Doo <small>@jonnydoo</small></h4>
+          </div>
+
+          <ul class="nav nav-pills nav-stacked">
+            <li>
+              <a href="#" class="transition">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                Overview
+              </a>
+            </li>
+            <li>
+              <a href="audience.html" class="transition">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                Audience
+              </a>
+            </li>
+            <li>
+              <a href="#finances-opts" class="transition" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="finances-opts">
+                <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                Finances
+                <span class="glyphicon glyphicon-menu-left pull-right transition" aria-hidden="true"></span>
+              </a>
+              <ul class="collapse list-unstyled" id="finances-opts">
+                <li>
+                  <a href="#" class="transition">
+                    Incomes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="transition">
+                    Outcomes
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="transition">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                Real time
+                <span class="badge pull-right">12</span>
+              </a>
+            </li>
+            <li class="nav-divider"></li>
+            <li>
+              <a href="#projects-opts" class="transition" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="projects-opts">
+                <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                Projects
+                <span class="glyphicon glyphicon-menu-left pull-right transition" aria-hidden="true"></span>
+              </a>
+              <ul class="collapse list-unstyled" id="projects-opts">
+                <li>
+                  <a href="#" class="transition">
+                    Free ration nation
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="transition">
+                    Cats going crazy
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div id="main" class="col-sm-offset-3 col-sm-9">
+          <div id="carousel-notification" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="imgs/doge.jpg" width="512">
+                <div class="carousel-caption">
+                  <h3>Doge said:</h3>
+                  <p>What are you doing? So scare. It's alright now.</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="imgs/cat.jpg" width="512">
+                <div class="carousel-caption">
+                  <h3>Crazy cat said:</h3>
+                  <p>I will never forgive you...</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="imgs/laika.jpg" width="512">
+                <div class="carousel-caption">
+                  <h3>Laika said:</h3>
+                  <p>Hey! How are you?</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-notification" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-notification" data-slide-to="1"></li>
+              <li data-target="#carousel-notification" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-notification" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-notification" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-sm-3" id="content-spy">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" class="active">
+                      <a href="#lorem">The Lorem</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#eros">The Eros</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#vestibulum">The Vestibulum</a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="content" class="col-sm-9" data-spy="scroll" data-target="#content-spy">
+                    <div id="lorem">
+                      <h2>The Lorem</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit enim eu sodales feugiat. In dignissim ultrices lectus et feugiat. Mauris interdum massa quis enim faucibus, id suscipit urna egestas. Cras nibh urna, blandit mattis auctor sed, tristique sed urna. Donec sed enim dignissim, volutpat tellus eget, semper mauris. Praesent eu congue risus. Curabitur euismod, eros in placerat commodo, dolor quam sagittis elit, convallis mollis lorem leo vitae odio. Integer sagittis urna sed tellus commodo consectetur. Sed molestie malesuada risus id ultricies. Fusce gravida hendrerit felis, quis cursus odio elementum sit amet. Integer efficitur velit at mauris convallis cursus.
+                      </p>
+                    </div>
+                    <div id="eros">
+                      <h2>The Eros</h2>
+                      <p>
+                        Curabitur eget pharetra risus, ac bibendum magna. Pellentesque dapibus ipsum a metus feugiat, ac rutrum quam pretium. Morbi scelerisque, elit in tincidunt vehicula, sem nulla condimentum dui, vitae sollicitudin tellus ligula ut justo. Proin consequat at velit sed lacinia. Nunc ac tellus molestie, consequat odio vel, tristique felis. Aliquam porttitor, justo ac aliquet vehicula, erat quam dictum est, nec facilisis mi ligula ut purus. Donec viverra mauris metus, aliquet porta quam vulputate quis. Sed bibendum tortor tortor, et malesuada lectus faucibus at. Proin lectus elit, congue eu dapibus ac, maximus commodo nunc. Vestibulum nunc augue, scelerisque sed augue at, viverra pellentesque magna. In non mauris id justo vehicula congue ultrices at ante. Nulla in ipsum diam. Nam in lacus ipsum.
+                      </p>
+                    </div>
+                    <div id="vestibulum">
+                      <h2>The Vestibulum</h2>
+                      <p>
+                        Integer eleifend consectetur est, et hendrerit arcu consequat sed. Sed lacus elit, ornare in turpis at, laoreet suscipit turpis. Vivamus scelerisque metus a sem feugiat consectetur. Nam tempus quis metus eget ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae sagittis nulla, sed porttitor leo. Duis rutrum nisi sed ex tristique euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu risus sodales, faucibus ex et, pellentesque eros. Aenean eleifend lorem a tincidunt euismod. Suspendisse tempus vel justo id vestibulum. Sed sed dui sollicitudin, condimentum ante iaculis, eleifend nulla. Etiam leo lectus, dignissim et luctus in, dignissim ac quam. Nunc sagittis viverra hendrerit. Donec vulputate, ante ac ultricies ullamcorper, urna purus bibendum lectus, in egestas nisi tellus non justo.
+                        <img class="img-responsive" src="imgs/jon.png">
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="js/switchery.min.js"></script>
+
+    <!-- Bootstrap 4 CDN JS -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js" integrity="sha256-+h0g0j7qusP72OZaLPCSZ5wjZLnoUUicoxbvrl14WxM= sha512-0z9zJIjxQaDVzlysxlaqkZ8L9jh8jZ2d54F3Dn36Y0a8C6eI/RFOME/tLCFJ42hfOxdclfa29lPSNCmX5ekxnw==" crossorigin="anonymous"></script> -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

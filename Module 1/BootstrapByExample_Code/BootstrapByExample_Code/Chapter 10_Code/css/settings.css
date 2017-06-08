@@ -1,0 +1,69 @@
+/*pills*/
+#profile-settings .nav-stacked li {
+	border-bottom: 1px solid #e5e5e5;
+	margin: 0;
+}
+
+#profile-settings .nav-stacked li:last-child {
+	border-bottom: 0;
+}
+
+#profile-settings .nav-stacked a {
+	border-radius: 0;
+}
+
+#profile-settings .nav-stacked li:first-child a {
+	border-radius: 0.4rem 0.4rem 0 0;
+}
+
+#profile-settings .nav-stacked li:last-child a {
+	border-radius: 0 0 0.4rem 0.4rem;
+}
+
+/*tabs*/
+#account-tabs > li {
+  border-bottom: 0.1rem solid #e5e5e5;
+}
+
+#account-tabs a {
+  border-bottom: 0;
+}
+
+#account-tabs li.active {
+  border-bottom: 0;
+}
+
+/*tabs form*/
+#account-tabs > li {
+  border-bottom: 0;
+}
+
+#account-tabs {
+  position: relative;
+  z-index: 99;
+}
+
+#main .tab-content {
+  padding: 2em;
+  margin-top: -0.1rem;
+}
+
+#main .form-horizontal .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/*list groups*/
+.list-group-item {
+  border-color: #e5e5e5;
+}
+
+#right-content .list-group .label {
+  float: right;
+  padding: 0.3rem 0.6rem;
+}
+
+#right-content .list-group .badge.glyphicon-star {
+  background-color: #f0ad4e;
+  padding: 0.4rem;
+  padding-left: 0.5rem;
+}
